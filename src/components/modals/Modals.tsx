@@ -12,13 +12,13 @@ interface ModalProps {
 }
 
 const Modals = ({
-  isOpen,
-  onRequestClose,
-  className,
-  children,
-}: ModalProps) => {
+                  isOpen,
+                  onRequestClose,
+                  className,
+                  children,
+                }: ModalProps) => {
   const [modalRoot] = useState(document.createElement('div'));
-  const modalContainer = document.getElementById('modal-root');
+  const modalContainer = document.getElementById('modals-root');
 
   useEffect(() => {
     if (!modalContainer) {
@@ -34,22 +34,22 @@ const Modals = ({
 
   return isOpen
     ? ReactDOM.createPortal(
-        <div className={classNames.modalWrapper}>
-          <div className={classNames.modalOverlay} onClick={onRequestClose} />
+      <div className={classNames.modalWrapper}>
+        <div className={classNames.modalOverlay} onClick={onRequestClose} />
+        <div
+          className={cx(classNames.modalContainer, className)}
+          onClick={onRequestClose}
+        >
           <div
-            className={cx(classNames.modalContainer, className)}
-            onClick={onRequestClose}
+            className={classNames.modalContent}
+            onClick={(e) => e.stopPropagation()}
           >
-            <div
-              className={classNames.modalContent}
-              onClick={(e) => e.stopPropagation()}
-            >
-              {children}
-            </div>
+            {children}
           </div>
-        </div>,
-        modalRoot,
-      )
+        </div>
+      </div>,
+      modalRoot,
+    )
     : null;
 };
 

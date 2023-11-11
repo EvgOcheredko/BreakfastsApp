@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-import Modals from '../modal/Modals';
+import Modals from '../modals/Modals';
 
 import icon_profile from '../../resources/img/icon_profile.png';
 import classNames from './profileDropdown.module.css';
