@@ -1,0 +1,48 @@
+.dropdownContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+.profileButton {
+  border: none;
+  background-color: #8e8e8e;
+}
+
+.dropdownMenu {
+  width: 80px;
+  height: 115px;
+  background: #fff;
+}
+
+.titleDropdown {
+  color: #000;
+  font-family: Inter;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 20px; /* 133.333% */
+  border-bottom: 1px solid #bb945f;
+  padding-bottom: 5px;
+  padding-top: 5px;
+}
+
+.dropdownPanel {
+  margin-top: 10px;
+}
+
+.menuLink {
+  border: none;
+  background-color: #fff;
+  justify-content: center;
+  text-decoration: none;
+  padding-top: 10px;
+  color: #000;
+}
+
+.loginModalWrapper {
+  width: 250px;
+}
+
+.registerModalWrapper {
+  width: 250px;
+}
