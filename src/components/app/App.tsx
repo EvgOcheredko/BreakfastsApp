@@ -1,16 +1,21 @@
-import classNames from './app.module.css';
+import classNames from './app.module.css'
 
-import AppHeader from '../appHeader/AppHeader';
-import { MainPage } from '../pages/MainPage';
+import AppHeader from '../appHeader/AppHeader'
+import { MainPage } from '../pages/MainPage'
+
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
 
 function App() {
-  return (
-    <div className={classNames.App}>
-      <AppHeader />
-      <MainPage />
-      <div id='modals-root' />
-    </div>
-  );
+	return (
+		<Router>
+			<div className={classNames.App}>
+				<AppHeader />
+				<main>
+					<MainPage />
+				</main>
+			</div>
+		</Router>
+	)
 }
 
-export default App;
+export default App
