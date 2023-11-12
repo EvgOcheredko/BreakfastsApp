@@ -1,18 +1,19 @@
 import './appHeader.module.css';
 import ProfileDropdown from '../profileDropdown/ProfileDropdown';
 
+import classNames from './appHeader.module.css';
+
 const AppHeader = () => {
   return (
-    <header className='app__header'>
-      <h1 className='app__title'>
+    <header className={classNames.appHeader}>
+      <h1 className={classNames.appTitle}>
         <a>Breakfast with Jenia</a>
       </h1>
-      <nav className='app__menu'>
+      <nav className={classNames.appMenu}>
         <ul>
+          <li>Recipes</li>
+          <li>Life hacks</li>
           <li>About</li>
-          <li>Recipes</li>
-          <li>Recipes</li>
-          <li>Contacts</li>
         </ul>
       </nav>
       <ProfileDropdown />

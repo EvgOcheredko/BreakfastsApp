@@ -1,0 +1,13 @@
+@font-face {
+    font-family: "InterRegular";
+    src: local("InterRegular"),
+    url("../fonts/inter/Inter-Regular.ttf") format("truetype");
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: "ForumRegular";
+    src: local("ForumRegular"),
+    url("../fonts/forum/Forum-Regular.ttf") format("truetype");
+    font-weight: normal;
+}

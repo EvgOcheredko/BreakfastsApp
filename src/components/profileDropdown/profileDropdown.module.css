@@ -1,48 +1,95 @@
 .dropdownContainer {
-  display: flex;
-  flex-direction: column;
+    position: relative;
+    flex-direction: column;
+    margin-left: 30px;
+    margin-right: 30px;
 }
 
 .profileButton {
-  border: none;
-  background-color: #8e8e8e;
+    border: none;
+    background-color: #8e8e8e;
 }
 
 .dropdownMenu {
-  width: 80px;
-  height: 115px;
-  background: #fff;
+    width: 80px;
+    height: 115px;
+    background: #fff;
+    position: absolute;
+    top: 120%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 4;
 }
 
 .titleDropdown {
-  color: #000;
-  font-family: Inter;
-  font-size: 15px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 20px; /* 133.333% */
-  border-bottom: 1px solid #bb945f;
-  padding-bottom: 5px;
-  padding-top: 5px;
+    color: #000;
+    font-family: 'InterRegular';
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 20px; /* 133.333% */
+    border-bottom: 1px solid #bb945f;
+    padding-bottom: 5px;
+    padding-top: 5px;
 }
 
 .dropdownPanel {
-  margin-top: 10px;
+    margin-top: 10px;
 }
 
 .menuLink {
-  border: none;
-  background-color: #fff;
-  justify-content: center;
-  text-decoration: none;
-  padding-top: 10px;
-  color: #000;
+    border: none;
+    background-color: #fff;
+    justify-content: center;
+    text-decoration: none;
+    padding-top: 10px;
+    color: #000;
 }
 
 .loginModalWrapper {
-  width: 250px;
+    width: 250px;
 }
 
 .registerModalWrapper {
-  width: 250px;
+    width: 250px;
+}
+
+.profileModalWrapper {
+    width: 600px;
+}
+
+.profileModal {
+    display: flex;
+}
+
+.leftBlock {
+    width: 170px;
+    height: 403px;
+    background: #0C0C0E;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.avatarBlock {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.avatar {
+    width: 80px;
+    height: 80px;
+    background: #FFF;
+}
+
+.userName {
+    margin-top: 15px;
+    background: #FFF;
+    width: 120px;
+    height: 30px;
+}
+
+.rightBlock {
+    margin-left: 20px;
 }

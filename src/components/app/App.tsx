@@ -1,11 +1,14 @@
-import './app.module.css';
+import classNames from './app.module.css';
 
 import AppHeader from '../appHeader/AppHeader';
+import { MainPage } from '../pages/MainPage';
 
 function App() {
   return (
-    <div className='App'>
+    <div className={classNames.App}>
       <AppHeader />
+      <MainPage />
+      <div id='modals-root' />
     </div>
   );
 }

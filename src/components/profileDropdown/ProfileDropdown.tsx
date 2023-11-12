@@ -14,27 +14,23 @@ const ProfileDropdown: React.FC<DropdownProps> = () => {
   const [modalMode, setModalMode] = useState<string | undefined>(undefined);
   const [isLoggedIn, setIsLoggedIn] = useState(true);
 
-  const toggleDropdown = () => {
-    setIsOpen(!isOpen);
-  };
-
   const handleModalClose = () => {
     setModalMode(undefined);
   };
 
   const openLoginModal = () => {
     setModalMode(modalMode === 'login' ? undefined : 'login');
-    toggleDropdown();
+    setIsOpen(false);
   };
 
   const openRegisterModal = () => {
     setModalMode(modalMode === 'register' ? undefined : 'register');
-    toggleDropdown();
+    setIsOpen(false);
   };
 
   const openProfileModal = () => {
     setModalMode(modalMode === 'profile' ? undefined : 'profile');
-    toggleDropdown();
+    setIsOpen(false);
   };
 
   const handleLogin = () => {
@@ -51,12 +47,12 @@ const ProfileDropdown: React.FC<DropdownProps> = () => {
   const handleLogout = () => {
     // Здесь реализуйте логику выхода пользователя
     setIsLoggedIn(false);
-    toggleDropdown();
+    setIsOpen(false);
   };
 
   return (
     <div className={classNames.dropdownContainer}>
-      <button onClick={toggleDropdown} className={classNames.profileButton}>
+      <button onClick={() => setIsOpen(true)} className={classNames.profileButton}>
         <img src={icon_profile} alt='Profile Icon' />
       </button>
 
@@ -74,7 +70,11 @@ const ProfileDropdown: React.FC<DropdownProps> = () => {
                 >
                   My Profile
                 </button>
-                <button onClick={handleLogout}>Log Out</button>
+                <button
+                  onClick={handleLogout}
+                  className={classNames.menuLink}>
+                  Log Out
+                </button>
               </div>
             </>
           ) : (
@@ -164,27 +164,20 @@ const ProfileDropdown: React.FC<DropdownProps> = () => {
       <Modals
         isOpen={modalMode === 'profile'}
         onRequestClose={handleModalClose}
+        className={classNames.profileModalWrapper}
       >
-        <h1>MY PROFILE</h1>
-        <form>
-          <label>
-            <h3>E-mail</h3>
-            <input type='email' />
-          </label>
-          <label>
-            <h3>Password</h3>
-            <input type='password' />
-          </label>
-          <button type='button' onClick={handleLogin}>
-            Log In
-          </button>
-          <p>
-            Don’t have an account?
-            <button onClick={openRegisterModal} className={classNames.menuLink}>
-              Register
-            </button>
-          </p>
-        </form>
+        <div className={classNames.profileModal}>
+          <div className={classNames.leftBlock}>
+            <div className={classNames.avatarBlock}>
+              <div className={classNames.avatar}></div>
+              <div className={classNames.userName}></div>
+            </div>
+          </div>
+          <div className={classNames.rightBlock}>
+            <h2>MY PROFILE</h2>
+
+          </div>
+        </div>
       </Modals>
     </div>
   );

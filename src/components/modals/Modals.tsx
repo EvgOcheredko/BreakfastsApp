@@ -1,8 +1,9 @@
-import React, { FC, useState, useEffect } from 'react';
+import React from 'react';
 import ReactDOM from 'react-dom';
 import cx from 'classnames';
 
 import classNames from './modals.module.css';
+import close_btn from '../../resources/img/close_btn.svg';
 
 interface ModalProps {
   isOpen: boolean;
@@ -17,20 +18,8 @@ const Modals = ({
                   className,
                   children,
                 }: ModalProps) => {
-  const [modalRoot] = useState(document.createElement('div'));
+
   const modalContainer = document.getElementById('modals-root');
-
-  useEffect(() => {
-    if (!modalContainer) {
-      document.body.appendChild(modalRoot);
-    }
-
-    return () => {
-      if (modalContainer && modalRoot) {
-        document.body.removeChild(modalRoot);
-      }
-    };
-  }, [modalContainer, modalRoot]);
 
   return isOpen
     ? ReactDOM.createPortal(
@@ -38,8 +27,10 @@ const Modals = ({
         <div className={classNames.modalOverlay} onClick={onRequestClose} />
         <div
           className={cx(classNames.modalContainer, className)}
-          onClick={onRequestClose}
         >
+          <button className={classNames.closeButton} onClick={onRequestClose}>
+            <img src={close_btn} alt='Close button' />
+          </button>
           <div
             className={classNames.modalContent}
             onClick={(e) => e.stopPropagation()}
@@ -48,7 +39,7 @@ const Modals = ({
           </div>
         </div>
       </div>,
-      modalRoot,
+      modalContainer!,
     )
     : null;
 };

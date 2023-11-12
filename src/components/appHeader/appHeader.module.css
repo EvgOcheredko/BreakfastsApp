@@ -1,32 +1,41 @@
-.app__header {
-  display: flex;
-  justify-content: space-between;
-  background: #8e8e8e;
+.appHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: #8e8e8e;
 }
 
-.app__title {
-  color: #000;
-  text-align: center;
-  font-size: 40px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 50px; /* 125% */
-  letter-spacing: 3px;
-  text-transform: uppercase;
+.appTitle {
+    font-family: "ForumRegular";
+    color: #000;
+    text-align: center;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 50px; /* 125% */
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-left: 30px;
 }
 
-.app__menu {
-  display: flex;
-  justify-content: right;
+.appMenu {
+    margin-left: auto;
 }
 
-.app__menu ul {
-  list-style-type: none;
-  display: inline-flex;
-  align-items: flex-start;
-  gap: 30px;
+.appMenu ul {
+    list-style-type: none;
+    display: inline-flex;
+    align-items: flex-start;
+    gap: 30px;
 }
 
-.app__menu li {
-  margin: 0 8px;
+.appMenu li {
+    margin-right: 15px;
+    color: #000;
+    font-family: 'InterRegular';
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 50px; /* 250% */
 }
