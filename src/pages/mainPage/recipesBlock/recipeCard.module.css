@@ -1,0 +1,7 @@
+.recipeCard {
+    width: 550px;
+    height: 555px;
+    flex-shrink: 0;
+    border: 1px solid #000;
+    background: #FFF;
+}
