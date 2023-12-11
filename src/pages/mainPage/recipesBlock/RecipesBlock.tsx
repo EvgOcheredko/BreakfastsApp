@@ -4,15 +4,34 @@ import RecipeCard, { Recipe } from './RecipeCard';
 
 import classNames from './recipesBlock.module.css';
 
+import main1 from '../../../resources/img/mainPage/main1.jpeg';
+
 const RecipesBlock = () => {
   const recipes: Recipe[] = [
     {
       id: 1,
-      title: 'Рецепт 1',
-      description: 'Описание рецепта 1',
-      imageUrl: '../../../resources/img/mainPage/main1.jpeg',
+      title: 'Тортилья с авокадо и лососем',
+      description: 'Ингредиенты:' + '1. ',
+      imageUrl: main1,
     },
-    // Другие объекты рецептов
+    {
+      id: 2,
+      title: 'Тортилья с авокадо и лососем',
+      description: 'Ингредиенты:' + '1. ',
+      imageUrl: main1,
+    },
+    {
+      id: 3,
+      title: 'Тортилья с авокадо и лососем',
+      description: 'Ингредиенты:' + '1. ',
+      imageUrl: main1,
+    },
+    {
+      id: 4,
+      title: 'Тортилья с авокадо и лососем',
+      description: 'Ингредиенты:' + '1. ',
+      imageUrl: main1,
+    },
   ];
 
   return (

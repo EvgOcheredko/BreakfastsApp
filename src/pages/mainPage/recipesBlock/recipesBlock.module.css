@@ -1,0 +1,19 @@
+.recipesBlockTitle {
+    color: #0C0C0E;
+    font-family: 'ForumRegular';
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 40px; /* 100% */
+    letter-spacing: 2px;
+    text-transform: capitalize;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.recipesList {
+    display: grid;
+    grid-template-columns: auto auto; /* Два столбца */
+    grid-gap: 10px; /* Пространство между блоками */
+    justify-content: center; /* Выравнивание по горизонтали */
+}

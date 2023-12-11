@@ -1,0 +1,21 @@
+.appFooter {
+    display: flex;
+    height: 110px;
+    background: #0C0C0E;
+}
+
+.footerTitle {
+    display: flex;
+    width: 300px;
+    height: 22px;
+    flex-direction: column;
+    justify-content: center;
+    color: #FFF;
+    text-align: center;
+    font-family: 'InterRegular';
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px; /* 100% */
+    letter-spacing: 2px;
+}
